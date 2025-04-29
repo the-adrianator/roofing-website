@@ -158,22 +158,22 @@ const Header = () => {
             </div>
 
             {/* Tablet/Mobile View - Phone number and Burger Menu */}
-            <div className="lg:hidden flex items-center">
+            <div className="lg:hidden flex items-center space-x-2">
               <a
-                href="tel:02012345678"
+                href="tel:07551139005"
                 className={cn(
-                  "flex items-center mr-4 transition-colors",
+                  "flex items-center transition-colors whitespace-nowrap",
                   isScrolled ? "text-[#2C3338]" : "text-white"
                 )}
               >
-                <Phone className="h-4 w-4 mr-1 text-[#C5A572]" />
+                <Phone className="h-4 w-4 mr-1 text-[#C5A572] flex-shrink-0" />
                 <span className="font-bold text-sm">07551 139005</span>
               </a>
 
-              {/* Burger Menu Button - Reverted to transforming X */}
+              {/* Burger Menu Button */}
               <button
                 onClick={toggleMenu}
-                className="flex flex-col justify-center items-center w-10 h-10 relative focus:outline-none"
+                className="flex flex-col justify-center items-center w-8 h-8 relative focus:outline-none flex-shrink-0"
                 aria-label="Toggle menu"
               >
                 <span
@@ -270,7 +270,7 @@ const Header = () => {
                 style={{ transitionDelay: `${isMenuOpen ? 700 : 0}ms` }}
               >
                 <a
-                  href="tel:02012345678"
+                  href="tel:07551 139005"
                   className="flex flex-col items-center"
                 >
                   <p className="text-white/70 mb-2">24/7 Emergency Service</p>

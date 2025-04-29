@@ -38,7 +38,7 @@ const EmergencyContact = () => {
           <div className="bg-gray-100 rounded-lg p-3 mb-4 w-full text-center">
             <p className="text-sm text-gray-500 mb-1">Call us now</p>
             <a
-              href="tel:02012345678"
+              href="tel:07551 139005"
               className="text-xl font-bold text-[#2C3338] flex items-center justify-center"
             >
               <Phone className="h-4 w-4 mr-2 text-red-600" />
