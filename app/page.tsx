@@ -58,7 +58,7 @@ export default function Home() {
               <Phone className="h-6 w-6 text-[#C5A572]" />
               <div>
                 <p className="text-sm text-white/70">24/7 Emergency Service</p>
-                <p className="font-bold">020 1234 5678</p>
+                <p className="font-bold">07551 139005</p>
               </div>
             </div>
             <div className="flex items-center gap-3">

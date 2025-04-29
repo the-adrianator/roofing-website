@@ -1,12 +1,21 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import Link from "next/link";
+import Image from "next/image";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 const Footer = () => {
   // Define logo path with fallback
-  const logoPath = "/images/logo-light.png"
+  const logoPath = "/images/logo-light.png";
 
   return (
     <footer className="bg-[#2C3338] text-white">
@@ -17,12 +26,19 @@ const Footer = () => {
             <div>
               <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
               <p className="text-white/70">
-                Subscribe to our newsletter for the latest roofing tips, industry news, and exclusive offers.
+                Subscribe to our newsletter for the latest roofing tips,
+                industry news, and exclusive offers.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Input type="email" placeholder="Your email address" className="bg-gray-700 border-gray-600 text-white" />
-              <Button className="bg-[#C5A572] hover:bg-[#b39461] text-white whitespace-nowrap">Subscribe</Button>
+              <Input
+                type="email"
+                placeholder="Your email address"
+                className="bg-gray-700 border-gray-600 text-white"
+              />
+              <Button className="bg-[#C5A572] hover:bg-[#b39461] text-white whitespace-nowrap">
+                Subscribe
+              </Button>
             </div>
           </div>
         </div>
@@ -43,20 +59,32 @@ const Footer = () => {
               />
             </div>
             <p className="text-white/70 mb-6">
-              Professional roofing services for residential and commercial properties across London, delivered with
-              craftsmanship and care.
+              Professional roofing services for residential and commercial
+              properties across London, delivered with craftsmanship and care.
             </p>
             <div className="flex space-x-4">
-              <Link href="https://facebook.com" className="text-white/70 hover:text-[#C5A572] transition-colors">
+              <Link
+                href="https://facebook.com"
+                className="text-white/70 hover:text-[#C5A572] transition-colors"
+              >
                 <Facebook size={20} />
               </Link>
-              <Link href="https://twitter.com" className="text-white/70 hover:text-[#C5A572] transition-colors">
+              <Link
+                href="https://twitter.com"
+                className="text-white/70 hover:text-[#C5A572] transition-colors"
+              >
                 <Twitter size={20} />
               </Link>
-              <Link href="https://instagram.com" className="text-white/70 hover:text-[#C5A572] transition-colors">
+              <Link
+                href="https://instagram.com"
+                className="text-white/70 hover:text-[#C5A572] transition-colors"
+              >
                 <Instagram size={20} />
               </Link>
-              <Link href="https://linkedin.com" className="text-white/70 hover:text-[#C5A572] transition-colors">
+              <Link
+                href="https://linkedin.com"
+                className="text-white/70 hover:text-[#C5A572] transition-colors"
+              >
                 <Linkedin size={20} />
               </Link>
             </div>
@@ -83,7 +111,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-white/70 hover:text-[#C5A572] transition-colors flex items-center">
+                <Link
+                  href="/about"
+                  className="text-white/70 hover:text-[#C5A572] transition-colors flex items-center"
+                >
                   <ArrowRight size={16} className="mr-2" /> About Us
                 </Link>
               </li>
@@ -96,7 +127,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-white/70 hover:text-[#C5A572] transition-colors flex items-center">
+                <Link
+                  href="/blog"
+                  className="text-white/70 hover:text-[#C5A572] transition-colors flex items-center"
+                >
                   <ArrowRight size={16} className="mr-2" /> Blog
                 </Link>
               </li>
@@ -172,11 +206,13 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin size={20} className="mr-3 text-[#C5A572] mt-1" />
-                <span className="text-white/70">123 Roofing Street, London, EC1A 1BB</span>
+                <span className="text-white/70">
+                  123 Roofing Street, London, EC1A 1BB
+                </span>
               </li>
               <li className="flex items-center">
                 <Phone size={20} className="mr-3 text-[#C5A572]" />
-                <span className="text-white/70">020 1234 5678</span>
+                <span className="text-white/70">07551 139005</span>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="mr-3 text-[#C5A572]" />
@@ -198,16 +234,26 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/70 text-sm">
-              © {new Date().getFullYear()} London Building & Roofing. All rights reserved.
+              © {new Date().getFullYear()} London Building & Roofing. All rights
+              reserved.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link href="/privacy-policy" className="text-white/70 hover:text-[#C5A572] text-sm">
+              <Link
+                href="/privacy-policy"
+                className="text-white/70 hover:text-[#C5A572] text-sm"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-white/70 hover:text-[#C5A572] text-sm">
+              <Link
+                href="/terms"
+                className="text-white/70 hover:text-[#C5A572] text-sm"
+              >
                 Terms & Conditions
               </Link>
-              <Link href="/sitemap" className="text-white/70 hover:text-[#C5A572] text-sm">
+              <Link
+                href="/sitemap"
+                className="text-white/70 hover:text-[#C5A572] text-sm"
+              >
                 Sitemap
               </Link>
             </div>
@@ -215,7 +261,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

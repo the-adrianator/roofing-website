@@ -1,45 +1,45 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Phone } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
+      setIsScrolled(window.scrollY > 10);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     // Prevent scrolling when menu is open
     if (isMenuOpen) {
-      document.body.style.overflow = "hidden"
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = ""
+      document.body.style.overflow = "";
     }
 
     return () => {
-      document.body.style.overflow = ""
-    }
-  }, [isMenuOpen])
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   // Define logo paths with fallbacks
-  const logoLight = "/images/logo-light.png"
-  const logoDark = "/images/logo-dark.png"
+  const logoLight = "/images/logo-light.png";
+  const logoDark = "/images/logo-dark.png";
 
   return (
     <>
@@ -47,13 +47,13 @@ const Header = () => {
       <header
         className={cn(
           "fixed top-4 left-1/2 -translate-x-1/2 z-[60] transition-all duration-300 w-[95%] max-w-7xl",
-          isScrolled ? "top-4" : "top-6",
+          isScrolled ? "top-4" : "top-6"
         )}
       >
         <div
           className={cn(
             "rounded-full transition-all duration-300 backdrop-blur-md",
-            isScrolled ? "bg-white/80 shadow-lg" : "bg-transparent",
+            isScrolled ? "bg-white/80 shadow-lg" : "bg-transparent"
           )}
         >
           {/* Removed container class and using custom padding */}
@@ -76,7 +76,9 @@ const Header = () => {
                 href="/services"
                 className={cn(
                   "text-sm font-medium transition-colors",
-                  isScrolled ? "text-[#2C3338] hover:text-[#456F8C]" : "text-white hover:text-[#C5A572]",
+                  isScrolled
+                    ? "text-[#2C3338] hover:text-[#456F8C]"
+                    : "text-white hover:text-[#C5A572]"
                 )}
               >
                 Services
@@ -85,7 +87,9 @@ const Header = () => {
                 href="/portfolio"
                 className={cn(
                   "text-sm font-medium transition-colors",
-                  isScrolled ? "text-[#2C3338] hover:text-[#456F8C]" : "text-white hover:text-[#C5A572]",
+                  isScrolled
+                    ? "text-[#2C3338] hover:text-[#456F8C]"
+                    : "text-white hover:text-[#C5A572]"
                 )}
               >
                 Portfolio
@@ -94,7 +98,9 @@ const Header = () => {
                 href="/sustainability"
                 className={cn(
                   "text-sm font-medium transition-colors",
-                  isScrolled ? "text-[#2C3338] hover:text-[#456F8C]" : "text-white hover:text-[#C5A572]",
+                  isScrolled
+                    ? "text-[#2C3338] hover:text-[#456F8C]"
+                    : "text-white hover:text-[#C5A572]"
                 )}
               >
                 Sustainability
@@ -103,7 +109,9 @@ const Header = () => {
                 href="/about"
                 className={cn(
                   "text-sm font-medium transition-colors",
-                  isScrolled ? "text-[#2C3338] hover:text-[#456F8C]" : "text-white hover:text-[#C5A572]",
+                  isScrolled
+                    ? "text-[#2C3338] hover:text-[#456F8C]"
+                    : "text-white hover:text-[#C5A572]"
                 )}
               >
                 About Us
@@ -112,7 +120,9 @@ const Header = () => {
                 href="/contact"
                 className={cn(
                   "text-sm font-medium transition-colors",
-                  isScrolled ? "text-[#2C3338] hover:text-[#456F8C]" : "text-white hover:text-[#C5A572]",
+                  isScrolled
+                    ? "text-[#2C3338] hover:text-[#456F8C]"
+                    : "text-white hover:text-[#C5A572]"
                 )}
               >
                 Contact
@@ -121,7 +131,9 @@ const Header = () => {
                 href="/blog"
                 className={cn(
                   "text-sm font-medium transition-colors",
-                  isScrolled ? "text-[#2C3338] hover:text-[#456F8C]" : "text-white hover:text-[#C5A572]",
+                  isScrolled
+                    ? "text-[#2C3338] hover:text-[#456F8C]"
+                    : "text-white hover:text-[#C5A572]"
                 )}
               >
                 Blog
@@ -130,22 +142,32 @@ const Header = () => {
 
             {/* Phone number and CTA - Only visible on lg screens and above */}
             <div className="hidden lg:flex items-center space-x-4">
-              <div className={cn("flex items-center", isScrolled ? "text-[#2C3338]" : "text-white")}>
+              <div
+                className={cn(
+                  "flex items-center",
+                  isScrolled ? "text-[#2C3338]" : "text-white"
+                )}
+              >
                 <Phone className="h-4 w-4 mr-2 text-[#C5A572]" />
-                <span className="font-bold">020 1234 5678</span>
+                <span className="font-bold">07551 139005</span>
               </div>
 
-              <Button className="bg-[#C5A572] hover:bg-[#b39461] text-white rounded-full">Get a Quote</Button>
+              <Button className="bg-[#C5A572] hover:bg-[#b39461] text-white rounded-full">
+                Get a Quote
+              </Button>
             </div>
 
             {/* Tablet/Mobile View - Phone number and Burger Menu */}
             <div className="lg:hidden flex items-center">
               <a
                 href="tel:02012345678"
-                className={cn("flex items-center mr-4 transition-colors", isScrolled ? "text-[#2C3338]" : "text-white")}
+                className={cn(
+                  "flex items-center mr-4 transition-colors",
+                  isScrolled ? "text-[#2C3338]" : "text-white"
+                )}
               >
                 <Phone className="h-4 w-4 mr-1 text-[#C5A572]" />
-                <span className="font-bold text-sm">020 1234 5678</span>
+                <span className="font-bold text-sm">07551 139005</span>
               </a>
 
               {/* Burger Menu Button - Reverted to transforming X */}
@@ -158,21 +180,21 @@ const Header = () => {
                   className={cn(
                     "block w-6 h-0.5 transition-all duration-300 ease-in-out",
                     isMenuOpen ? "rotate-45 translate-y-1.5" : "",
-                    isScrolled ? "bg-[#2C3338]" : "bg-white",
+                    isScrolled ? "bg-[#2C3338]" : "bg-white"
                   )}
                 ></span>
                 <span
                   className={cn(
                     "block w-6 h-0.5 my-1.5 transition-all duration-300 ease-in-out",
                     isMenuOpen ? "opacity-0" : "",
-                    isScrolled ? "bg-[#2C3338]" : "bg-white",
+                    isScrolled ? "bg-[#2C3338]" : "bg-white"
                   )}
                 ></span>
                 <span
                   className={cn(
                     "block w-6 h-0.5 transition-all duration-300 ease-in-out",
                     isMenuOpen ? "-rotate-45 -translate-y-1.5" : "",
-                    isScrolled ? "bg-[#2C3338]" : "bg-white",
+                    isScrolled ? "bg-[#2C3338]" : "bg-white"
                   )}
                 ></span>
               </button>
@@ -185,7 +207,9 @@ const Header = () => {
       <div
         className={cn(
           "fixed inset-0 bg-[#2C3338]/95 backdrop-blur-md z-50 lg:hidden transition-all duration-500",
-          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none",
+          isMenuOpen
+            ? "opacity-100 visible"
+            : "opacity-0 invisible pointer-events-none"
         )}
       >
         {/* Scrollable content area */}
@@ -205,9 +229,13 @@ const Header = () => {
                   href={item.href}
                   className={cn(
                     "text-white text-2xl font-medium hover:text-[#C5A572] transition-all duration-500",
-                    isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8",
+                    isMenuOpen
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 -translate-x-8"
                   )}
-                  style={{ transitionDelay: `${isMenuOpen ? index * 100 : 0}ms` }}
+                  style={{
+                    transitionDelay: `${isMenuOpen ? index * 100 : 0}ms`,
+                  }}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
@@ -217,7 +245,9 @@ const Header = () => {
               <div
                 className={cn(
                   "pt-8 transition-all duration-500",
-                  isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
+                  isMenuOpen
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
                 )}
                 style={{ transitionDelay: `${isMenuOpen ? 600 : 0}ms` }}
               >
@@ -233,15 +263,22 @@ const Header = () => {
               <div
                 className={cn(
                   "flex items-center justify-center mt-8 py-6 border-t border-white/20 transition-all duration-500",
-                  isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
+                  isMenuOpen
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
                 )}
                 style={{ transitionDelay: `${isMenuOpen ? 700 : 0}ms` }}
               >
-                <a href="tel:02012345678" className="flex flex-col items-center">
+                <a
+                  href="tel:02012345678"
+                  className="flex flex-col items-center"
+                >
                   <p className="text-white/70 mb-2">24/7 Emergency Service</p>
                   <div className="flex items-center">
                     <Phone className="h-6 w-6 mr-3 text-[#C5A572]" />
-                    <span className="text-white text-xl font-bold">020 1234 5678</span>
+                    <span className="text-white text-xl font-bold">
+                      07551 139005
+                    </span>
                   </div>
                 </a>
               </div>
@@ -253,7 +290,7 @@ const Header = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
