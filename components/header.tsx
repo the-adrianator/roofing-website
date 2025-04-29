@@ -162,7 +162,7 @@ const Header = () => {
               <a
                 href="tel:07551139005"
                 className={cn(
-                  "flex items-center transition-colors whitespace-nowrap",
+                  "hidden sm:flex items-center transition-colors whitespace-nowrap",
                   isScrolled ? "text-[#2C3338]" : "text-white"
                 )}
               >
